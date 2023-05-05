@@ -1,0 +1,249 @@
+@import '../../GlobalStyle/mixins';
+
+.header{
+    position: fixed;
+    width: 100%;
+    height:var(--header-height);
+    top: 0;
+    z-index: 10;
+    background-color: white;
+
+    @include Responsive(tablet) {
+       height: 60px;
+    }
+
+    @include Responsive(smartPhone) {
+        height: 60px;
+
+    }
+}
+
+.header_logo{
+    font-family:  var( --logo-font);
+    @include Responsive(smartPhone) {
+        display: none;
+    }
+}
+
+.header_top{
+    display: block;
+    padding: 10px 0px;
+    font-size: 13px;
+    color: hsl(0deg 0% 47%);
+    border-bottom: 1px solid var(--border-color);
+    height: 50px;
+}
+
+.header_top_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 93%;
+    align-items: center;
+
+}
+
+.header_social{
+    padding: 5px;
+    background: hsl(0, 0%, 95%);
+    border-radius: 5px;
+    margin: 0 5px;
+    font-size: 17px;
+    color: hsl(0deg 0% 47%);
+}
+
+.header_social_container, .header_top_actions{
+    display: flex;
+}
+
+.header_top_actions select{
+    margin: 0 5px;
+    padding: 5px;
+    border-color: var(--border-color);
+    border-radius: 5px;
+}
+
+.nav__menu__icon{
+    color: var(--main-color);
+    padding-right: 8px;
+    font-size: 2rem;
+    @include Responsive(pc) {
+        display: none;
+    }
+    
+}
+
+.nav__menu__icon:hover {
+    cursor: pointer;
+}
+
+
+.header_main{
+    display: block;
+    padding: 10px 0px;
+    border-bottom: 1px solid var(--border-color);
+    height: 60px;
+}
+
+.header_main_container{
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin: 0 auto;
+    font-size: 20px;
+    align-items: center;
+}
+
+.header_logo{
+    font-size: var(--header-fontsize);
+    background-color: var(--main-color);
+    color: white;
+    padding: 0 10px;
+    border-radius: 10px;
+}
+
+.nav{
+    display: flex;
+
+}
+
+.nav li{
+    margin: 0 20px;
+}
+
+.header_main_button{
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid var(--header-color);
+    background-color: white;
+    color: var(--header-color);
+}
+
+
+.header_main_button_icon{
+    margin-right: 10px;
+}
+
+.login{
+    font-size: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.nav .active, .nav a:hover{
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    animation: underline 0.5s linear  forwards ;
+}
+
+#pc_nav_menu, .header_top {
+    @include Responsive(tablet) {
+        display: none;
+    }
+    @include Responsive(smartPhone) {
+        display: none;
+    }
+}
+
+#small_nav_menu {
+    @include Responsive(pc) {
+        display: none;
+    }
+}
+
+.nav__menu {
+    z-index: 20;
+    @include Responsive(tablet) {
+        left: 0;
+        width: 45%;
+        background-color: white;
+    }
+    @include Responsive(smartPhone) {
+        left: 0;
+        width: 45%;
+        background-color: white;
+    }
+}
+
+.sidebar__menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+}
+
+.sidebar__menu__icon{
+    padding: 10px 0 0 10px;
+    display: flex;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.sidebar__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar__nav__logo {
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #b6d9e7;
+    color: var(--main-color) !important;
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+.nav__item {
+    display: inline-block;
+    @include Responsive(tablet) {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        line-height: 2rem;
+        text-align: center;
+    }
+    @include Responsive(smartPhone) {
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        line-height: 2rem;
+        text-align: center;
+    }
+}
+
+.nav__item:hover {
+    @include Responsive(tablet) {
+        background-color: white;
+        border-left: 2px solid var(--main-color);
+    }
+    @include Responsive(smartPhone) {
+        background-color: white;
+        border-left: 2px solid var(--main-color);
+    }
+}
+
+.nav__link {
+    font-size: 2rem;
+    font-weight: 500;
+   
+    @include Responsive(tablet) {
+        display: block;
+        width: 100%;
+    }
+    @include Responsive(smartPhone) {
+        display: block;
+        width: 100%;
+    }
+}

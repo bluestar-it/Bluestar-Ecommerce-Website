@@ -1,0 +1,133 @@
+@import '../../Components/GlobalStyle/mixins';
+
+.background {
+    margin-top: var(--header-height);
+    @include Responsive(tablet) {
+        margin-top: 60px;
+    }
+
+    @include Responsive(smartPhone) {
+        margin-top: 60px;
+       
+
+    }
+}
+
+.background_container {
+    background: url(../../Assets/banner-1.jpg);
+    height: 80vh;
+    background-size: cover;
+    position: relative;
+
+    @include Responsive(tablet) {
+        height: 60vh;
+    }
+
+    @include Responsive(smartPhone) {
+        height: 40vh;
+
+
+    }
+}
+
+.background_intro {
+    max-width: 350px;
+    position: absolute;
+    left: 15vh;
+    top: 15vh;
+
+    @include Responsive(tablet) {
+        max-width: 300px;
+        top: 9vh;
+        left: 7%;
+
+    }
+
+    @include Responsive(smartPhone) {
+        max-width: 200px;
+        top: 5vh;
+        left: 5%;
+        font-size: 2rem;
+
+    }
+}
+
+.br_title {
+    font-size: 50px;
+    font-weight: 700;
+
+    @include Responsive(tablet) {
+
+        font-size: 35px;
+        font-weight: 700;
+
+    }
+
+    @include Responsive(smartPhone) {
+
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+}
+
+.br_subtitle {
+    color: var(--main-color);
+    font-size: 30px;
+    font-weight: 600;
+
+    @include Responsive(tablet) {
+
+        font-size: 30px;
+        font-weight: 700;
+
+    }
+
+    @include Responsive(smartPhone) {
+
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+}
+
+.br_content {
+    font-size: 25px;
+    color: var(--header-color);
+    margin-bottom: 20px;
+
+    @include Responsive(tablet) {
+
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+
+    @include Responsive(smartPhone) {
+
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+}
+
+.br-button {
+    padding: 10px 20px;
+    border: 1px solid var((--main-color));
+    border-radius: 5px;
+    background-color: var((--main-color));
+    color: white;
+
+    @include Responsive(tablet) {
+
+        padding: 5px 10px;
+
+    }
+
+    @include Responsive(smartPhone) {
+
+        padding: 5px 10px;
+
+
+    }
+}

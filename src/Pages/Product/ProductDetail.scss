@@ -1,0 +1,97 @@
+@import '../../Components/GlobalStyle/mixins';
+
+.product_detail_container {
+    width: 80%;
+    display: grid;
+    margin: calc(var(--header-height) + 3rem) auto;
+    align-items: center;
+
+    @include Responsive(pc) {
+        grid-template-columns: 50% 50%;
+
+    }
+
+    .product_detail_img {
+        text-align: center;
+        margin-bottom: 20px;
+        img {
+            width: 350px;
+            height: 350px;
+
+            @include Responsive(tablet) {
+                width: 250px;
+                height: 250px;
+        
+            }
+    
+            @include Responsive(smartPhone) {
+                width: 250px;
+                height: 250px;
+        
+            }
+        }
+
+       
+    }
+}
+
+.product_detail_info {
+    margin-bottom: 20px;
+    .product_detail_name {
+        font-size: 2rem;
+    }
+
+    .product_detail_rating {
+        font-size: 2rem;
+        .star-ratings{
+            margin-right: 1rem;
+        }
+    }
+
+    .product_detail_price {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    .product_detail_des {
+        font-size: 1.7rem;
+    }
+
+    .product_detail_button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        margin-right: 2rem;
+        font-family: var(--main-font);
+        font-size: 16px;
+    }
+
+    .product_detail_cart_button{
+        background-color: white;
+    }
+
+
+    .product_detail_buy_button {
+        background-color: var(--main-color);
+        color: white;
+        border-color: var(--main-color);
+      
+    }
+
+    .product_detail_buy_button:hover {
+        @include hover-button;
+    }
+
+    .product_detail_buy_button:active {
+        @include active-button;
+    }
+
+    .product_detail_cart_button:hover {
+        @include hover-button($background-color: white);
+    }
+
+    .product_detail_cart_button:active {
+        @include active-button($background-color: white);
+    }
+
+}

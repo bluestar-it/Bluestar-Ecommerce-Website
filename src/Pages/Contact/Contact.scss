@@ -1,0 +1,121 @@
+@import '../../Components/GlobalStyle/mixins';
+
+
+.contact {
+    margin-top: var(--header-height);
+}
+
+.contact__bgr {
+    background: url(../../Assets/Contact/banner-2.jpg);
+    background-position: 50%;
+    background-size: cover;
+    height: 65vh;
+
+    @include Responsive(smartPhone) {
+        height: 40vh;
+    }
+
+    .contact_br_intro {
+        position: absolute;
+        left: 15vh;
+        top: 30vh;
+        max-width: 290px;
+
+        @include Responsive(tablet) {
+            left: 15vh;
+            top: 30vh;
+            max-width: 250px;
+        }
+
+        @include Responsive(smartPhone) {
+            left: 10vh;
+            top: 15vh;
+            max-width: 200px;
+        }
+
+        .contact_br_title {
+            font-size: 50px;
+            font-weight: 700;
+            color: var(--main-color);
+
+            @include Responsive(tablet) {
+                font-size: 50px;
+            }
+
+            @include Responsive(smartPhone) {
+                font-size: 30px;
+            }
+
+        }
+
+        .contact_br_subtitle {
+            font-size: 25px;
+            color: var(--header-color);
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.contact__content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3rem 0;
+
+    .contact_form {
+        padding: 4rem 4rem 1rem 4rem;
+        border: 1px solid var(--header-color);
+        width: calc(50% - 125px);
+
+        h3 {
+            color: var(--main-color);
+        }
+
+        #message {
+            resize: none;
+            height: 13rem;
+        }
+
+       
+
+        @include Responsive(tablet) {
+            width: 100%;
+            margin-bottom: 4rem;
+            padding: 4rem;
+        }
+        @include Responsive(smartPhone) {
+            width: 100%;
+            margin-bottom: 4rem;
+            padding: 4rem;
+        }
+    }
+
+    .contact_address {
+        padding: 4rem;
+        border: 1px solid var(--header-color);
+        max-height: 425px;
+
+        .contact_city {
+            padding: 20px 10px;
+
+            background-color: hsl(353deg 100% 78% / 28%);
+
+            h3 {
+                color: var(--main-color);
+            }
+        }
+    }
+    @include Responsive(tablet) {
+        flex-direction: column;
+        margin: 4rem ;
+    }
+    @include Responsive(smartPhone) {
+        flex-direction: column;
+        margin: 4rem ;
+    }
+
+
+}
+
+.form__submit__btn{
+    margin-top: 2rem;
+}
